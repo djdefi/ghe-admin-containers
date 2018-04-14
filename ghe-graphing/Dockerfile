@@ -6,5 +6,5 @@ RUN apt-get --yes install \
 
 COPY collectd.conf /etc/collectd/
 
-EXPOSE 25826
+EXPOSE 25826/udp
 CMD /usr/sbin/collectd -C /etc/collectd/collectd.conf -f
