@@ -7,7 +7,7 @@ docker run -d --rm --name graphite --restart=always -p 80:80 -p 2003-2004:2003-2
 # grafana
 
 ```
-docker run -d --rm --name grafana -p 3000:3000 grafana/grafana
+docker run -d --rm --name grafana -p 3000:3000 --link graphite grafana/grafana
 ```
 
 
@@ -15,5 +15,5 @@ docker run -d --rm --name grafana -p 3000:3000 grafana/grafana
 
 ```
 docker build -t ghe-collectd .
-docker run -d -p 25826:25826/udp --link graphite --rm --name ghe-collectd ghe-clooectd
+docker run -d -p 25826:25826/udp --link graphite --rm --name ghe-collectd ghe-collectd
 ```
