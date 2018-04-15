@@ -1,0 +1,34 @@
+version: 3
+services:
+    graphite-statsd:
+        container_name: graphite
+        restart: always
+        ports:
+            - '80:80'
+            - '2003-2004:2003-2004'
+            - '2023-2024:2023-2024'
+            - '8125:8125/udp'
+            - '8126:8126'
+        image: graphiteapp/graphite-statsd
+
+    grafana:
+        container_name: grafana
+        ports:
+            - '3000:3000'
+        volumes:
+            - '$(pwd)/dashboards:/var/lib/grafana/dashboards'
+            - '$(pwd)/provisioning:/etc/grafana/provisioning'
+        environment:
+            - GF_DASHBOARDS_JSON_ENABLED=true
+            - GF_DASHBOARDS_JSON_path=/var/lib/grafana/dashboards
+        links:
+            - graphite
+        image: grafana/grafana
+
+    ghe-collectd:
+        ports:
+            - '25826:25826/udp'
+        links:
+            - graphite
+        container_name: ghe-collectd
+        build: .
