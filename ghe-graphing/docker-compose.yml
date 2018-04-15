@@ -16,8 +16,8 @@ services:
         ports:
             - '3000:3000'
         volumes:
-            - '$(pwd)/dashboards:/var/lib/grafana/dashboards'
-            - '$(pwd)/provisioning:/etc/grafana/provisioning'
+            - './dashboards:/var/lib/grafana/dashboards'
+            - './provisioning:/etc/grafana/provisioning'
         environment:
             - GF_DASHBOARDS_JSON_ENABLED=true
             - GF_DASHBOARDS_JSON_path=/var/lib/grafana/dashboards
