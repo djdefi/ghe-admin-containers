@@ -1,4 +1,4 @@
-version: 3
+version: "3"
 services:
     graphite-statsd:
         container_name: graphite
