@@ -7,7 +7,7 @@ docker run -d --name graphite --restart=always -p 80:80 -p 2003-2004:2003-2004 -
 # grafana
 
 ```
-docker run -d --rm --name grafana -p 3000:3000 --link -e "GF_DASHBOARDS_JSON_ENABLED=true" -e "GF_DASHBOARDS_JSON_path=/var/lib/grafana/dashboards" graphite grafana/grafana
+docker run -d --rm --name grafana -p 3000:3000 -v dashboards:/var/lib/grafana/dashboards --link -e "GF_DASHBOARDS_JSON_ENABLED=true" -e "GF_DASHBOARDS_JSON_path=/var/lib/grafana/dashboards" graphite grafana/grafana
 ```
 
 # collectd
