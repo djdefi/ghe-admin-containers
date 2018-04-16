@@ -41,15 +41,9 @@ services:
       # Graylog web interface and REST API
       - 9000:9000
       # Syslog TCP
-<<<<<<< HEAD
       - 5514:514
       # Syslog UDP
       - 5514:514/udp
-=======
-      - 514:514
-      # Syslog UDP
-      - 514:514/udp
->>>>>>> 0ca916b8b36032364a40bd7ff72c15fbc8692bd9
       # GELF TCP
       - 12201:12201
       # GELF UDP
