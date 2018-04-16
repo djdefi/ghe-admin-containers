@@ -11,7 +11,15 @@ Grafana runs on `http://[dockerhost]:3000` - Login is: `admin/admin`
 
 Enable [collectd forwarding in the GitHub Enterprise management console](https://help.github.com/enterprise/admin/articles/configuring-collectd/#enable-collectd-forwarding-on-github-enterprise), and set `[dockerhost]:25826` as the value.
 
+## External Ports:
+- 25826 udp for collectd
+- 3000 tcp for Grafana web interface
+
+
 # Individual Containers
+
+If you prefer to run the containers manually:
+
 ## graphite
 
 ```
