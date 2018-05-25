@@ -1,0 +1,17 @@
+version: "3"
+services:
+    ghe-lb-haproxy:
+        image: haproxy:1.8-alpine
+        container_name: ghe-lb-haproxy
+        restart: always
+        ports:
+            - '80:80'
+            - '443:443'
+            - '22:22'
+            - '9418:9418'
+        volumes:
+            - './haproxy:/usr/local/etc/haproxy:ro'
+        command: 'haproxy -c -db -f /usr/local/etc/haproxy/haproxy.cfg'
+
+        environment:
+            - GHE_IP=${GHE_IP:-}
