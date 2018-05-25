@@ -9,3 +9,7 @@ A Collectd / Graphite / Grafana stack for viewing GitHub Enterprise metrics forw
 ## ghe-logging
 
 A [Graylog](https://www.graylog.org) stack for viewing GitHub Enterprise logs forwarded via syslog
+
+## ghe-loadbalancing
+
+A simple HAProxy loadbalancer container with PROXY protocol support
