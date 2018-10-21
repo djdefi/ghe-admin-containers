@@ -1437,7 +1437,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "aliasByNode($graph_host.statsd.gauge-github.ldap.sync.{user,team,new_members}.total.value, 4)",
+              "target": "aliasByNode($graph_host.statsd.gauge-github.ldap.sync.*.total.value, 4)",
               "textEditor": true
             }
           ],
@@ -1511,7 +1511,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "aliasByNode(transformNull(fallbackSeries(maximumAbove($graph_host.statsd.latency-github.ldap.sync.{users,teams,new_members}.runtime-percentile-90.value, 0), $graph_host.statsd.latency-github.ldap.sync.users.runtime-percentile-90.value)), 4)",
+              "target": "aliasByNode(transformNull(fallbackSeries(maximumAbove($graph_host.statsd.latency-github.ldap.sync.*.runtime-percentile-90.value, 0), $graph_host.statsd.latency-github.ldap.sync.users.runtime-percentile-90.value)), 4)",
               "textEditor": true
             }
           ],
