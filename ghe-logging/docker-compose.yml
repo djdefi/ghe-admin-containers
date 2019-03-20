@@ -24,7 +24,7 @@ services:
     mem_limit: 1g
   # Graylog: https://hub.docker.com/r/graylog/graylog/
   graylog:
-    image: graylog/graylog:2.4.3-1
+    image: graylog/graylog:2.5.2-1
     volumes:
       - graylog_journal:/usr/share/graylog/data/journal
       - ./config:/usr/share/graylog/data/config
