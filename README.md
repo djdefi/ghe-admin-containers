@@ -4,11 +4,11 @@ A collection of useful demonstration container images for [GitHub Enterprise](ht
 
 ## ghe-graphing
 
-A Collectd / Graphite / Grafana stack for receiving viewing [GitHub Enterprise metrics forwarded via collected](https://help.github.com/enterprise/2.13/admin/articles/configuring-collectd/).
+A Collectd / Graphite / Grafana stack for receiving viewing [GitHub Enterprise metrics forwarded via collected](https://help.github.com/enterprise/admin/articles/configuring-collectd/).
 
 ## ghe-logging
 
-A [Graylog](https://www.graylog.org) stack for receiving viewing [GitHub Enterprise logs forwarded via syslog](https://help.github.com/enterprise/2.13/admin/articles/log-forwarding/).
+A [Graylog](https://www.graylog.org) stack for receiving viewing [GitHub Enterprise logs forwarded via syslog](https://help.github.com/enterprise/admin/articles/log-forwarding/).
 
 ## ghe-loadbalancing
 
