@@ -1,0 +1,12 @@
+
+version: '2'
+
+#docker-compose -f docker-compose.yml -f docker-compose.nxlog.yml run nxlog
+services:
+  nxlog:
+    build: https://github.com/djdefi/docker-nxlog.git
+    links:
+      - graylog
+    volumes: 
+      - ./bundle:/bundle
+      - ./nxlog/nxlog.conf:/etc/nxlog/nxlog.conf
