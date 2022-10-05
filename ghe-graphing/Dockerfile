@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:bullseye
 
 RUN apt-get update; apt-get --yes upgrade
 RUN apt-get --yes install \
