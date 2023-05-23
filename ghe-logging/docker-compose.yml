@@ -11,6 +11,7 @@ services:
     volumes:
       - es_data:/usr/share/elasticsearch/data
     environment:
+      - discovery.type=single-node
       - http.host=0.0.0.0
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ulimits:
