@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 RUN apt-get update; apt-get --yes upgrade
 RUN apt-get --yes install \
