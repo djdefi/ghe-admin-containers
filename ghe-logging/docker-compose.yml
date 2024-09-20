@@ -2,7 +2,7 @@ version: '2'
 services:
   # MongoDB: https://hub.docker.com/_/mongo/
   mongo:
-    image: mongo:7
+    image: mongo:8
     volumes:
       - mongo_data:/data/db
   # Elasticsearch: https://www.elastic.co/guide/en/elasticsearch/reference/5.5/docker.html
