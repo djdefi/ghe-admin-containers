@@ -1,7 +1,7 @@
 version: "3"
 services:
     ghe-lb-haproxy:
-        image: haproxy:3.1-alpine
+        image: haproxy:3.2-alpine
         container_name: ghe-lb-haproxy
         restart: always
         ports:
