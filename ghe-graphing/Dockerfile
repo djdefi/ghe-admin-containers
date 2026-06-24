@@ -1,4 +1,4 @@
-FROM debian:trixie
+FROM debian:trixie-20260623
 
 RUN apt-get update; apt-get --yes upgrade
 RUN apt-get --yes install \
